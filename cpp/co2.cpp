@@ -38,17 +38,13 @@ class batsman{
         
    }
 };
-
-
-
-   float batsman::calcavg(int innings,int runs,int notout){
+    float batsman::calcavg(int innings,int runs,int notout){
     return runs/(innings-notout);
    }
 
  int main(){
      class batsman bt;
      bt.readdata();
-   
      bt.displaydata();
      return 0;
     }
