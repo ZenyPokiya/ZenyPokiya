@@ -1,0 +1,36 @@
+
+
+
+
+
+
+
+
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+int rate;
+int qty;
+int amt;
+float dis;
+float billamt;
+float gst;
+float netamt;
+clrscr ();
+printf("rate of item:");
+scanf("%d",&rate );
+printf("no.of items:");
+scanf("%d",&qty);
+amt=rate*qty;
+dis=amt*0.05;
+billamt=amt-dis;
+gst=billamt*0.18;
+netamt=gst+billamt;
+
+
+printf("rate\tqty\tamt\tdis\tbillamt\tgst\tnetamt");
+printf("\n%d\t%d\t%d\t%0.2f\t%f\t%0.2f\t%0.2f\t",rate,qty,amt,dis,billamt,gst,netamt);
+getch();
+return 0;
+}

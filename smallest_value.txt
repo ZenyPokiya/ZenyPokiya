@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+int a;
+int b;
+scanf("%d",&a);
+sacnf("%d",&b);
+if (a<b){
+printf("Number b is:");
+}else{
+printf("Number a is:");
+}
+return 0;
+}
