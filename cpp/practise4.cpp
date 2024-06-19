@@ -5,5 +5,5 @@ int main(){
     for(i='A';i<='Z';i++){
         cout<<char(i)<<":"<<char(i+32)<<"\t";
     }
-    return 0;
+ return 0;
 } 
