@@ -20,16 +20,7 @@ class flight{
     }
 
     void calfuel(){
-        cout<<"Fuel consumed:"<<fuel<<endl;
-        if(distance<=1000){
-            cout<<"fuel consumed 500"<<endl;
-        }
-        else if(distance>1000 && distance<=2000){
-            cout<<"Fuel consumed 1100"<<endl;
-        }
-        else if(distance>2000){
-            cout<<"Fuel consumed 2200"<<endl;
-        }
+        cout<<"Distance covered in 1 litre fuel:"<<fuel<<endl;
     }
 
     void showinfo(){
@@ -37,11 +28,12 @@ class flight{
         cout<<"Destination:"<<destination<<endl;
         cout<<"Distance covered:"<<distance<<endl;
         cout<<"Fuel consumed:"<<fuel<<endl;
+        cout<<"Distance covered in 1 litre fuel:"<<calfuel(distance,fuel)<<endl;
     }
     };
 
     float flight::calfuel(int distance,int fuel){
-        return fuel;
+        return fuel/distance;
     }
 
     int main(){
