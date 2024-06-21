@@ -5,7 +5,7 @@ class report{
     private:
     int adno;
     char name[20];
+    };
     
-};
 
 int main(){}
