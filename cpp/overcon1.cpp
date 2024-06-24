@@ -16,9 +16,7 @@ class volume{
          float pi=22/7;
          cout<<"Voume of Sphere is:"<<(4*(pi)*z*z*z)/3<<endl;
      }
-       
 };
-
 int main(){
     volume obj(6),obj1(5,8,9),obj2(4,5),obj3(9.9);
     return 0;
