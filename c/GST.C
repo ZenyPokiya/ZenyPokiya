@@ -1,13 +1,4 @@
-
-
-
-
-
-
-
-
 #include <stdio.h>
-
 int main()
 {
 int rate;
@@ -27,7 +18,6 @@ dis=amt*0.05;
 billamt=amt-dis;
 gst=billamt*0.18;
 netamt=gst+billamt;
-
 
 printf("rate\tqty\tamt\tdis\tbillamt\tgst\tnetamt");
 printf("\n%d\t%d\t%d\t%0.2f\t%f\t%0.2f\t%0.2f\t",rate,qty,amt,dis,billamt,gst,netamt);
