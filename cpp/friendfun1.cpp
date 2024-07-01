@@ -28,8 +28,6 @@ class Number{
         }
     }
     
-
-
 int main()
 {
     Number x;
