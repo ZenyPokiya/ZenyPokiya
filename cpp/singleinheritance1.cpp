@@ -1,55 +1,48 @@
 #include<iostream>
 using namespace std;
-
-class book{
+class Batsman{
     protected:
-    int bookno;
-    char booktitle[20];
-    float price;
-    int n;
-    float totalcost(int n);
-    
+     int bcode;
+    char bname[50];
+    int innings,notout,runs;
+    float batavg;
+    float calcavg(int innings,int runs,int notout);
 
     public:
-    void input(){
-      cout<<"Book no.:";
-      cin>>bookno;
-      cout<<"Book title:";
-      cin>>booktitle;
-      cout<<"Price of book:";
-      cin>>price;
-      cout<<"Number of books:";
-      cin>>n;
+     void readdata(){
+        cout<<"Enter bcode:";
+        cin>>bcode;
+        cout<<"Enter batsman name:";
+        cin>>bname;
+        cout<<"Innings:";
+        cin>>innings;
+        cout<<"Notout:";
+        cin>>notout;
+        cout<<"Runs:";
+        cin>>runs;
+    }
 
-     }
-     
-
-     
 };
 
-class derive:public book{
+class derive: public Batsman{
     public:
-    
-   
-    void totalcost(){
-    input();
-     cout<<endl<<"Book no:"<<bookno<<endl;
-     cout<<"Book title:"<<booktitle<<endl;
-     cout<<"Price of book:"<<price<<endl;
-     cout<<"Number of book purchased:"<<n<<endl;
-     cout<<"Total cost:"<<totalcost<<endl;
-     }
-        
-    };
-
-float book::totalcost(int n){
-   return price*n;
-}
+    void displaydata(){
+        readdata();
+        cout<<endl<<"Batsman name:"<<bname<<endl;
+        cout<<"Batsman code:"<<bcode<<endl;
+        cout<<"Innings played by batsman:"<<innings<<endl;
+        cout<<"Runs scored:"<<runs<<endl;
+        cout<<"Notout:"<<notout<<endl;
+       cout<<"Average:"<<calcavg(innings,runs,notout)<<endl;
+        }
+};
+  float Batsman :: calcavg(int innings,int runs,int notout){
+    return runs/(innings-notout);
+   }
 
 int main()
 {
-    class derive de;
-   
-    de.totalcost();
+    class derive ob;
+    ob.displaydata();
 return 0;
 }
