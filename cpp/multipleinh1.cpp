@@ -27,8 +27,17 @@ class Flight{
         
         cout<<"Distance covered:";
         cin>>distance;
-       
-         if(distance<=1000){
+       }
+}; 
+
+class derive:public Flight,public Flight1{
+    public:
+    void output(){
+   cout<<endl<<"Flight no.:"<<flightno<<endl;
+        cout<<"Destination:"<<destination<<endl;
+        cout<<"Distance covered:"<<distance<<endl;
+
+   if(distance<=1000){
              cout<<"fuel consumed 500"<<endl;
             }
             else if(distance>1000 && distance<=2000){
@@ -37,13 +46,7 @@ class Flight{
              else if(distance>2000){
              cout<<"Fuel consumed 2200"<<endl;
          }
-     }
-}; 
-
-class derive:public Flight,public Flight1{
-    public:
-   
-   
+         }
     
 };
 float Flight1::calfuel(int distance){
@@ -64,5 +67,6 @@ int main()
     class derive c;
     c.feedinfo();
     c.showinfo();
+    c.output();
   return 0;
 }
