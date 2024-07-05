@@ -1,2 +1,3 @@
- cout<<"choice your transaction :"<<endl;
-         cin>>ch;
+virtual void display(){
+        cout<<"Base class display function call";
+    }

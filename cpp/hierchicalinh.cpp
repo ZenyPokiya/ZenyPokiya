@@ -6,7 +6,7 @@ class base{
     int a;
     public:
     void setA(){
-        cout<<"Enter A:";
+        cout<<endl<<"Enter A:";
         cin>>a;
     }
 };

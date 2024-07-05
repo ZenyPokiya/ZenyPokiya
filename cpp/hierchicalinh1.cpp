@@ -24,7 +24,7 @@ class derive1: public Shape{
     int l,b,h;
     public:
     void Cuboid(){
-        cout<<endl<<"Enter l:";
+        cout<<endl<<endl<<"Enter l:";
         cin>>l;
         cout<<"Enter b:";
         cin>>b;
@@ -42,11 +42,27 @@ class derive2: public Shape{
     int a;
     public:
     void Cube(){
-        cout<<endl<<"Enter a:";
+        cout<<endl<<endl<<"Enter a:";
         cin>>a;
     }
         void volume(){
             cout<<"Volume of cube is:"<<6*a;
+        }
+};
+
+class derive3: public Shape{
+    protected:
+    int x,y;
+    float pi=3.14;
+    public:
+    void Cylinder(){
+        cout<<endl<<endl<<"Enter x:";
+        cin>>x;
+        cout<<"Enter y:";
+        cin>>y;
+    }
+        void volume(){
+            cout<<"Volume of cylinder is:"<<(pi)*x*x*y;
         }
 };
 
@@ -64,6 +80,10 @@ int main(){
     class derive2 obj2;
     obj2.Cube();
     obj2.volume();
+
+    class derive3 obj3;
+    obj3.Cylinder();
+    obj3.volume();
     
 
 return 0;
