@@ -2,14 +2,14 @@
 #include <iomanip>
 using namespace std;
 
-
-struct Menu {
+// Structure to represent a menu item
+struct MenuItem {
     string name;
     float price;
     int quantity;
 
     // Constructor
-    Menu(string n = "", float p = 0.0, int q = 0) {
+    MenuItem(string n = "", float p = 0.0, int q = 0) {
         name = n;
         price = p;
         quantity = q;
@@ -30,23 +30,23 @@ struct Menu {
 
 // Function prototypes
 void displayMenuOptions();
-void displayMenu(Menu menu[], int numItems);
-void orderItem(Menu menu[], int numItems);
-void generateBill(Menu menu[], int numItems);
+void displayMenu(MenuItem menu[], int numItems);
+void orderItem(MenuItem menu[], int numItems);
+void generateBill(MenuItem menu[], int numItems);
 
 int main() {
     const int MAX_ITEMS = 10;
-    Menu menu[MAX_ITEMS] = {
-        Menu("Burger", 150),
-        Menu("Pizza", 250),
-        Menu("Pasta", 200),
-        Menu("Salad", 200),
-        Menu("Sandwich", 150),
-        Menu("Fries", 151),
-        Menu("Coke", 80),
-        Menu("Coffee", 200),
-        Menu("Tea", 10),
-        Menu("Ice Cream", 60)
+    MenuItem menu[MAX_ITEMS] = {
+        MenuItem("Burger", 150),
+        MenuItem("Pizza", 250),
+        MenuItem("Pasta", 200),
+        MenuItem("Salad", 200),
+        MenuItem("Sandwich", 150),
+        MenuItem("Fries", 151),
+        MenuItem("Coke", 80),
+        MenuItem("Coffee", 200),
+        MenuItem("Tea", 10),
+        MenuItem("Ice Cream", 60)
     };
     int numItems = 10;
     int choice;
@@ -71,8 +71,7 @@ int main() {
                 break;
             case 4:
                 // Exit
-                cout << "************* THANK YOU **************" << endl;
-                cout << "********** VISIT AGAIN ***************" << endl;
+                cout << "Exiting program." << endl;
                 break;
             default:
                 cout << "Invalid choice. Please try again." << endl;
@@ -85,16 +84,16 @@ int main() {
 
 // Function to display menu options
 void displayMenuOptions() {
-    cout << "\n*********** MENU OPTIONS **********" << endl;
+    cout << "\n===== MENU OPTIONS =====" << endl;
     cout << "1. Display Menu" << endl;
     cout << "2. Order Item" << endl;
     cout << "3. Generate Bill" << endl;
     cout << "4. Exit" << endl;
-    cout << "---------------------------------------" << endl;
+    cout << "========================" << endl;
 }
 
 // Function to display the menu items
-void displayMenu(Menu menu[], int numItems) {
+void displayMenu(MenuItem menu[], int numItems) {
     cout << "\n===== MENU =====" << endl;
     cout <<  "Item Name";
     cout <<  "Price";
@@ -110,7 +109,7 @@ void displayMenu(Menu menu[], int numItems) {
 }
 
 // Function to order an item
-void orderItem(Menu menu[], int numItems) {
+void orderItem(MenuItem menu[], int numItems) {
     int itemIndex;
     int quantity;
 
@@ -130,7 +129,7 @@ void orderItem(Menu menu[], int numItems) {
 }
 
 // Function to generate bill
-void generateBill(Menu menu[], int numItems) {
+void generateBill(MenuItem menu[], int numItems) {
     cout << "\n===== BILL =====" << endl;
     cout <<  "Item Name";
     cout << "Quantity";
@@ -145,7 +144,7 @@ void generateBill(Menu menu[], int numItems) {
         }
     }
 
-    cout << "------------------------------------" << endl;
+    cout << "=================" << endl;
     cout << "Total Amount: " << totalAmount << endl;
-    cout << "------------------------------------" << endl;
+    cout << "=================" << endl;
 }
