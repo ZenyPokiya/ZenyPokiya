@@ -59,6 +59,7 @@
   "files.associations": {
     "GST.C": "cpp",
     "ostream": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "*.tcc": "cpp"
   }
 }
