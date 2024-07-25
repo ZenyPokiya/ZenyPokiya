@@ -37,16 +37,16 @@ void generateBill(MenuItem menu[], int numItems);
 int main() {
     const int MAX_ITEMS = 10;
     MenuItem menu[MAX_ITEMS] = {
-        MenuItem("Burger", 150),
-        MenuItem("Pizza", 250),
-        MenuItem("Pasta", 200),
-        MenuItem("Salad", 200),
-        MenuItem("Sandwich", 150),
-        MenuItem("Fries", 151),
-        MenuItem("Coke", 80),
-        MenuItem("Coffee", 200),
-        MenuItem("Tea", 10),
-        MenuItem("Ice Cream", 60)
+        MenuItem(" 1. Burger", 150),
+        MenuItem(" 2. Pizza", 250),
+        MenuItem(" 3. Pasta", 200),
+        MenuItem(" 4. Salad", 200),
+        MenuItem(" 5. Sandwich", 150),
+        MenuItem(" 6. Fries", 151),
+        MenuItem(" 7. Coke", 80),
+        MenuItem(" 8. Coffee", 200),
+        MenuItem(" 9. Tea", 10),
+        MenuItem("10. Ice Cream", 60)
     };
     int numItems = 10;
     int choice;

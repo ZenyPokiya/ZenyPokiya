@@ -35,7 +35,7 @@ class derive:public Student
     {
         takedata();
 
-        cout<<"Admin number:"<<admno;
+        cout<<"\nAdmin number:"<<admno;
         cout<<"\nStudent name:"<<sname;
         cout<<"\nMaths marks:"<<math;
         cout<<"\nSci marks:"<<sci;
