@@ -8,7 +8,7 @@ class T2_ATM
        
         int attempt=0;
         System.out.print("Enter password:");
-        String pass = sc.next();
+        String pass = sc.nextLine();
      
         while(true){
             if(attempt==3)
