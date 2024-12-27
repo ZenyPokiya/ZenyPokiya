@@ -17,7 +17,7 @@ class T2_ATM
                 break;
             }
         
-       else if(dpass==pass) {
+       else if(pass.equals(dpass)) {
             System.out.print("Wecome!");
 
         }
